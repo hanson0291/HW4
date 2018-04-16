@@ -1,4 +1,9 @@
 /*
+Name: Andrew Hanson
+Email: awh5563@psu.edu
+Class: CMPSC 122, section 1
+Program 4.1 - Stack include file
+Description:  
 create interactive command driven prompt parsing commands from user invoking functions.
 
 Prompt user to specify what data type they want the priority queue to contain
@@ -6,8 +11,8 @@ Prompt user to specify what data type they want the priority queue to contain
 
 Enter looping prompt parsing cmmands
 
-
 */
+
 #include <iostream>
 #include <cstdio>
 #include <sstream>
@@ -82,13 +87,6 @@ string input, input2;
 				PriorityQueue<bool> *booler = new PriorityQueue<bool>();
 			}
 
-
-			//PriorityQueue<int> Q;
-			//Q.enqueue();
-
-			//if(value == 1){
-			//	cout << "you printed 1! OHMYGOERD" << endl;
-			//}
 		}
 		if(input2.rfind("dequeue", 0) == 0){
 			input2.erase(0,8);
@@ -105,7 +103,6 @@ string input, input2;
 
 		}
 		if(input2.rfind("first", 0) == 0){
-		// print first value
 			input2.erase(0,6);
 			int value = 0;
 			istringstream ss(input2);

@@ -108,12 +108,11 @@ string expression, postfix = "", postfixstringer = "";
 
 	}
 
-
-
     cout << endl << "The equivalent postfix expression of " << expression <<" is: " << endl << "\t" << postfix << endl;
 
     //isITanOperator(x);
     //calculate(expression);
+
 
 
     return 0;

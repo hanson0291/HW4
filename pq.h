@@ -1,11 +1,14 @@
 /*
-
-This program must contain the priorityQueue class as specified.
+Name: Andrew Hanson
+Email: awh5563@psu.edu
+Class: CMPSC 122, section 1
+Program 4.1 - Stack include file
+Description:  This program must contain the priorityQueue class as specified.
 
 You may need additional classes to implement priorityQueue class(possibly ListNode and List)
 
-
 */
+
 #include <iostream>
 #include <string>
 //#include <array>

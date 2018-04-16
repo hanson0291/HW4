@@ -1,13 +1,11 @@
-//---------------------------------------------------------------------
-// Name: 
-// Email: @psu.edu
-// Class: CMPSC 122, Section 3
-// Program 4.1 - Stack include file
-//
-// Description: Contains List and Stack implementations from
-// class notes.
-//
-//---------------------------------------------------------------------
+/*
+Name: Andrew Hanson
+Email: awh5563@psu.edu
+Class: CMPSC 122, section 1
+Program 4.1 - Stack include file
+Description:  Contains List and Stack implementations from class notes.
+
+*/
 
 class ListNode
 {
@@ -138,3 +136,4 @@ public:
 	int pop() { return list->removeHead(); }
 	int top() { return list->head(); }
 };
+
