@@ -32,6 +32,16 @@ bool isITanOperand(char o){
     }
 }
 
+int WhatIsTheInteger(int o1, int o2, char first){
+     switch(first){
+         case '*': return (o1 * o2);
+         case '/': return (o1 / o2);
+         case '+': return (o1 + o2);
+         case '-': return (o1 - o2);
+     }
+    return 0;
+}
+
 void calculate(string stringer){
     Stack Operators;
     Stack Operands;
@@ -40,16 +50,37 @@ void calculate(string stringer){
 	istringstream ss(stringer);
 	//ss >> value;
 
+while(ss >> input){
+        
+        char first = Operators.top();
+        Operators.pop();
+        int o1 = Operands.top();
+        Operands.pop();
+        int o2 = Operands.top();
+        Operands.pop();
+        Operands.push(WhatIsTheInteger(o1,o2,first));
+    }
+    Operators.pop();
+
+    while(!Operators.isEmpty()){
+        char first = Operators.top();
+        Operators.pop();
+        int o1 = Operands.top();
+        Operands.pop();
+        int o2 = Operands.top();
+        Operands.pop();
+        Operands.push(WhatIsTheInteger(o1,o2,first));
+    }
 
     cout << Operands.top() << endl;
 }
 
 string NOspace(string stringer){
-	int size = stringer.length();	
+	int length = stringer.length();	
 	string e = "";
 	char ch = e[0];
 		
-	for (int x = 0; x < size; ++x){
+	for (int x = 0; x < length; ++x){
 		ch = stringer[x];	
 		if (ch != ' ')
 		    e += ch;
@@ -62,9 +93,7 @@ string NOspace(string stringer){
 int main(){
 
 Stack stack;
-string expression, postfix = "";
-char x;
-
+string expression, postfix = "", postfixstringer = "";
 
     cout << "Enter an infix expression: ";
     getline(cin,expression);
@@ -73,17 +102,18 @@ char x;
     char *posterfixer = new char[NOspaceLength - 1];
 
 	for (int i = 0; i < NOspaceLength; i++) {
-
         posterfixer[i] = postfix[i];
-        postfix += posterfixer[i];
-        postfix += " ";
+        postfixstringer += posterfixer[i];
+        postfixstringer += " ";
 
 	}
+
+
 
     cout << endl << "The equivalent postfix expression of " << expression <<" is: " << endl << "\t" << postfix << endl;
 
     //isITanOperator(x);
-
+    //calculate(expression);
 
 
     return 0;
