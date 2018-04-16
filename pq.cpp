@@ -34,15 +34,6 @@ string input, input2;
 	
 	getline(cin,input);
 
-	//switch(1){	
-	//	case 1: PriorityQueue<int> *pq = new Pr//PriorityQueue<float> floater;iorityQueue<int>();
-	//	case 2: PriorityQueue<float> *pq = new PriorityQueue<float>();
-	//	case 3: PriorityQueue<double> *pq = new PriorityQueue<double>();
-	//	case 4: PriorityQueue<string> *pq = new PriorityQueue<string>();
-	//	case 5: PriorityQueue<bool> *pq = new PriorityQueue<bool>();
-	//}
-
-
 	cout << "Now accepting commands (quit to exit program):" << endl;
 
 	while(input2 != "quit") {
@@ -72,6 +63,12 @@ string input, input2;
 			}
 			else if(input == "2"){
 				PriorityQueue<float> *floater = new PriorityQueue<float>();
+
+				float floatin = static_cast<float>(value);
+
+//float var_x = 9.99;
+//int   var_y = static_cast<int>(var_x);
+
 				floater->enqueue(value,priority);
 			}
 			else if(input == "3"){
@@ -129,3 +126,10 @@ string input, input2;
 
 //cout << "priority = " << priority;
 //cout << "integer->enqueue(value, priority) JUST RAN SUCCESSFULLY! TRY TO PRINT!" << endl;
+	//switch(1){	
+	//	case 1: PriorityQueue<int> *pq = new Pr//PriorityQueue<float> floater;iorityQueue<int>();
+	//	case 2: PriorityQueue<float> *pq = new PriorityQueue<float>();
+	//	case 3: PriorityQueue<double> *pq = new PriorityQueue<double>();
+	//	case 4: PriorityQueue<string> *pq = new PriorityQueue<string>();
+	//	case 5: PriorityQueue<bool> *pq = new PriorityQueue<bool>();
+	//}
